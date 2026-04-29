@@ -30,7 +30,7 @@ int main(){
     printf("Use Symbols? (Yes-1 No-0): ");
     scanf("%d", &useSymbols);
 
-    // ❌ CHECK INVALID INPUT (not 0 or 1)
+   
     if((useUpper < 0 || useUpper > 1) ||
        (useLower < 0 || useLower > 1) ||
        (useNumber < 0 || useNumber > 1) ||
@@ -57,41 +57,4 @@ int main(){
     return 0;
 }
 
-/*int main(){
-    int length;
-    int useNumber, useUpper, useLower, useSymbols;
 
-    char all[100];
-    char password[100];
-
-    printf("Enter password length:");
-    scanf("%d", &length);
-
-    printf("Use Uppercase? (Yes-1  No-0):");
-    scanf("%d", &useUpper);
-
-    printf("Use Lowercase? (Yes-1  No-0):");
-    scanf("%d", &useLower);
-    
-    printf("Use Number? (Yes-1  No-0):");
-    scanf("%d", &useNumber);
-
-    printf("Use Symbols? (Yes-1  No-0):");
-    scanf("%d", &useSymbols);
-
-    int index = buildCharacterPool(all, useUpper, useLower, useNumber, useSymbols);
-
-    if(index == 0){
-        printf("No character set selected!\n");
-        return 1;
-    }
-
-    srand(time(0));
-
-    generatePassword(all, index, length, password);
-
-    printf("Generate password: %s\n", password);
-
-    saveToFile(password);
-
-    return 0;*/
